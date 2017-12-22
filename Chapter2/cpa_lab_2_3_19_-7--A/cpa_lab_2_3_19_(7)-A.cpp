@@ -3,19 +3,17 @@
 #include <string>
 using namespace std;
 int main(void) {
-	int n, prev1 = 0, prev2 = 0, temp;
-	cout << "Enter number (>3): ";
+	int n, a = 0, b = 0, c;
+	cout << " Fibonacci sequence"<<endl;
+	cout << "Enter number : ";
 	cin >> n;
-
-	prev1 = 1;
-	prev2 = 1;
-	for (int i = 2; i < n; i++){
-		temp = prev1 + prev2;
-		prev2 = prev1;
-		prev1 = temp;
+	a = 1;
+	b = 1;
+	for (int i = 2; i < n; i++) {
+		c = a + b;
+		b = a;
+		a = c;
 	}
-
-	cout << endl << temp << endl;
-	system("pause");
+	cout << endl << c << endl;
 	return 0;
 }
